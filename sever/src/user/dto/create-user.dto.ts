@@ -4,4 +4,6 @@ export class CreateUserDto {
   username: string;
   @ApiProperty({ description: '手机号码' })
   mobile: string;
+  @ApiProperty({ description: '密码' })
+  password: string;
 }

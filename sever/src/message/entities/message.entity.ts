@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { prop, Ref } from '@typegoose/typegoose';
+import { modelOptions, prop, Ref } from '@typegoose/typegoose';
 import { Group } from 'src/group/entities/group.entity';
 import { User } from 'src/user/entities/user.entity';
 export enum MESSAGE_TYPE {
@@ -8,6 +8,7 @@ export enum MESSAGE_TYPE {
   VIDEO = 3, //视频
   REFERENCE = 4, //引用消息
 }
+@modelOptions({})
 export class Message {
   @prop({ default: '' })
   @ApiProperty({ description: '文本' })

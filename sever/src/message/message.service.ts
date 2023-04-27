@@ -1,12 +1,13 @@
-import { Injectable } from '@nestjs/common';
-import { CreateMessageDto } from './dto/create-message.dto';
-import { UpdateMessageDto } from './dto/update-message.dto';
-
+import { Inject, Injectable } from '@nestjs/common';
+import { ReturnModelType } from '@typegoose/typegoose';
+import { Message } from './entities/message.entity';
 @Injectable()
 export class MessageService {
-  create(createMessageDto: CreateMessageDto) {
-    return 'This action adds a new message';
-  }
+  constructor(
+    @Inject(Message.name)
+    private readonly messageModel: ReturnModelType<typeof Message>,
+  ) {}
+  async create() {}
 
   findAll() {
     return `This action returns all message`;
@@ -16,7 +17,7 @@ export class MessageService {
     return `This action returns a #${id} message`;
   }
 
-  update(id: number, updateMessageDto: UpdateMessageDto) {
+  update(id: number) {
     return `This action updates a #${id} message`;
   }
 

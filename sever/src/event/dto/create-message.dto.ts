@@ -8,7 +8,7 @@ export enum MESSAGE_TYPE {
 export class CreateMessageDto {
   @ApiProperty({ description: '文本' })
   text: string;
-  @ApiProperty({ description: '文本' })
+  @ApiProperty({ description: '消息类型' })
   type: MESSAGE_TYPE;
   @ApiProperty({ description: '图片' })
   image: string;

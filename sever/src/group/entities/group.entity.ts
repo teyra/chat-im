@@ -1,10 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Prop, Ref } from '@typegoose/typegoose';
+import { ModelOptions, Prop, Ref } from '@typegoose/typegoose';
 import { User } from 'src/user/entities/user.entity';
 export enum CHAT_TYPE {
   SINGLE = 1, //单聊
   GROUP = 2, //群聊
 }
+@ModelOptions({})
 export class Group {
   @Prop({ default: '' })
   @ApiProperty({ description: '群昵称' })

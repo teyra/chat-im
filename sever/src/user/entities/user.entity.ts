@@ -1,7 +1,7 @@
-
 import { ApiProperty } from '@nestjs/swagger';
-import { Prop } from '@typegoose/typegoose';
+import { ModelOptions, Prop } from '@typegoose/typegoose';
 import { hashSync } from 'bcryptjs';
+@ModelOptions({})
 export class User {
   @Prop()
   @ApiProperty({ description: '账号' })

@@ -1,6 +1,6 @@
+import { getModelForClass, mongoose } from '@typegoose/typegoose';
 import { DynamicModule, Module, Provider } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { getModelForClass, mongoose } from '@typegoose/typegoose';
 import { entities } from './entities';
 @Module({})
 export class DbModule {
