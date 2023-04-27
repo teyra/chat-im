@@ -5,7 +5,6 @@ export enum CHAT_TYPE {
   SINGLE = 1, //单聊
   GROUP = 2, //群聊
 }
-@ModelOptions({})
 export class Group {
   @Prop({ default: '' })
   @ApiProperty({ description: '群昵称' })
